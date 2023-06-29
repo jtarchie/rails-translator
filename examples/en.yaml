@@ -1,7 +1,7 @@
 en:
   welcome: "Welcome!"
-  # services_html: "We provide some fancy services to <em>good people</em>."
-  # static_pages:
-  #   index:
-  #     welcome: "Welcome!"
-  #     services_html: "We provide some fancy services to <em>good people</em>."
+  services_html: "We provide some fancy services to <em>good people</em>."
+  static_pages:
+    index:
+      welcome: "Welcome!"
+      services_html: "We provide some fancy services to <em>good people</em>."
