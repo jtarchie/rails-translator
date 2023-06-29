@@ -1,0 +1,16 @@
+version: '3'
+
+tasks:
+  build: go build ./...
+  generate: go generate ./...
+  lint:
+    cmds:
+    - gofmt -w .
+    - golangci-lint run --fix --timeout "10m"
+    - deno fmt README.md
+  default:
+    cmds:
+    - task: generate
+    - task: lint
+    - task: build
+    - go run github.com/onsi/ginkgo/v2/ginkgo -r -p --race --cover --tags test
