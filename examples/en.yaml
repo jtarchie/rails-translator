@@ -1,6 +1,5 @@
 en:
-  welcome: "Welcome!"
-  services_html: "We provide some fancy services to <em>good people</em>."
+  welcome_html: "<b>Welcome %{username}!</b>"
   static_pages:
     index:
       welcome: "Welcome!"

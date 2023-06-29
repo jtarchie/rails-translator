@@ -25,6 +25,7 @@ const prompt = `
 Translate the following message from the locale %q to the locale %q.
 Please use the following criteria:
 - Ensure HTML tags are maintained.
+- Do not translate placeholders that are surrounded by token '%{' and '}'.
 `
 
 func (c *CLI) translate(value string) (string, error) {
