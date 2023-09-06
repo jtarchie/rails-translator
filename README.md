@@ -1,7 +1,16 @@
-# Translation
+# Rails Language File Translator
 
-This is demo of translation of Rails internationalization file to another
-locale.
+Translate Rails internationalization files from one language to another using
+the power of OpenAI's GPT-3.5 Turbo. This tool is designed to handle nested YAML
+structures and ensures that HTML tags and placeholders are preserved during the
+translation process.
+
+## Features
+
+- Translates Rails language files while preserving HTML tags.
+- Does not translate placeholders surrounded by `%%{` and `}`.
+- Supports nested YAML structures.
+- Automatically saves the translated file with the appropriate language code.
 
 ## Usage
 
@@ -39,3 +48,9 @@ jp:
 ```
 
 Keeps the HTML and `%{}` placeholders.
+
+## Limitations
+
+- Ensure that your OpenAI API quota is sufficient for the number of
+  translations.
+- The tool assumes that the provided YAML file is correctly formatted.
