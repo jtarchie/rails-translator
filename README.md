@@ -27,7 +27,7 @@ translation process.
 
    English:
 
-   ```
+   ```yaml
    en:
      welcome_html: "<b>Welcome %{username}!</b>"
      static_pages:
@@ -38,7 +38,7 @@ translation process.
 
    Japanese (translation):
 
-   ```
+   ```yaml
    jp:
      static_pages:
        index:
