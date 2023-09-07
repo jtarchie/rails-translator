@@ -14,13 +14,15 @@ translation process.
 
 ## Usage
 
-1. Set the environment variable `OPENAI_ACCESS_TOKEN` to your OpenAI API token.
 1. Translate the example from English to Japanese:
 
    ```bash
-   go run main.go \
-     --filename examples/en.yaml \
-     --to-language "jp"
+   translation \
+    --from-filename examples/en.yml \
+    --from-language "British English" \
+    --to-filename examples/jp.yml \
+    --to-language "Japanese" \
+    --openai-access-token $YOUR_OPENAI_API_TOKEN
    ```
 
 1. Check the file `examples/jp.yml`.
