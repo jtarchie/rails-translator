@@ -15,9 +15,11 @@ type Language map[string]interface{}
 type Payload map[string]Language
 
 type CLI struct {
-	Filename          string `help:"filename of the original language" required:""`
-	FromLanguage      string `help:"language to translate from" required:"" default:"en"`
+	BaseURL           string `help:"url of the OpenAI HTTP domain" default:"https://api.openai.com/v1"`
+	FromFilename      string `help:"filename of the original language" required:""`
+	FromLanguage      string `help:"language to translate from" required:"" default:"American English"`
 	OpenAIAccessToken string `help:"the API token for the OpenAI API" required:"" env:"OPENAI_ACCESS_TOKEN"`
+	ToFilename        string `help:"filename to save the translations to" required:""`
 	ToLanguage        string `help:"language to translate to" required:""`
 }
 
@@ -29,7 +31,9 @@ Please use the following criteria:
 `
 
 func (c *CLI) translate(value string) (string, error) {
-	client := openai.NewClient(c.OpenAIAccessToken)
+	config := openai.DefaultConfig(c.OpenAIAccessToken)
+	config.BaseURL = c.BaseURL
+	client := openai.NewClientWithConfig(config)
 
 	response, err := client.CreateChatCompletion(
 		context.Background(),
@@ -82,7 +86,7 @@ func (c *CLI) iterate(node Language) (Language, error) {
 }
 
 func (c *CLI) Run() error {
-	contents, err := os.ReadFile(c.Filename)
+	contents, err := os.ReadFile(c.FromFilename)
 	if err != nil {
 		return fmt.Errorf("could not read file: %w", err)
 	}
@@ -95,12 +99,12 @@ func (c *CLI) Run() error {
 	}
 
 	if _, ok := payload[c.FromLanguage]; !ok {
-		return fmt.Errorf("could not find %q in %q", c.FromLanguage, c.Filename)
+		return fmt.Errorf("could not find %q in %q", c.FromLanguage, c.FromFilename)
 	}
 
 	translation, err := c.iterate(payload[c.FromLanguage])
 	if err != nil {
-		return fmt.Errorf("could not iterate through language file %q: %w", c.Filename, err)
+		return fmt.Errorf("could not iterate through language file %q: %w", c.FromFilename, err)
 	}
 
 	newPayload := Payload{}
@@ -111,7 +115,7 @@ func (c *CLI) Run() error {
 		return fmt.Errorf("could not translate to YAML: %w", err)
 	}
 
-	newFilename := filepath.Join(filepath.Dir(c.Filename), fmt.Sprintf("%s.yaml", c.ToLanguage))
+	newFilename := filepath.Join(filepath.Dir(c.FromFilename), fmt.Sprintf("%s.yaml", c.ToFilename))
 
 	err = os.WriteFile(newFilename, contents, os.ModePerm)
 	if err != nil {

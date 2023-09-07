@@ -25,29 +25,29 @@ translation process.
 
 1. Check the file `examples/jp.yml`.
 
-English:
+   English:
 
-```
-en:
-  welcome_html: "<b>Welcome %{username}!</b>"
-  static_pages:
-    index:
-      welcome: "Welcome!"
-      services_html: "We provide some fancy services to <em>good people</em>."
-```
+   ```
+   en:
+     welcome_html: "<b>Welcome %{username}!</b>"
+     static_pages:
+       index:
+         welcome: "Welcome!"
+         services_html: "We provide some fancy services to <em>good people</em>."
+   ```
 
-Japanese (translation):
+   Japanese (translation):
 
-```
-jp:
-  static_pages:
-    index:
-      services_html: 私たちは<em>善良な人々</em>にいくつかの華やかなサービスを提供します。
-      welcome: ようこそ！
-  welcome_html: <b>ようこそ %{username} さん！</b>
-```
+   ```
+   jp:
+     static_pages:
+       index:
+         services_html: 私たちは<em>善良な人々</em>にいくつかの華やかなサービスを提供します。
+         welcome: ようこそ！
+     welcome_html: <b>ようこそ %{username} さん！</b>
+   ```
 
-Keeps the HTML and `%{}` placeholders.
+   Keeps the HTML and `%{}` placeholders.
 
 ## Limitations
 
