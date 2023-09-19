@@ -1,4 +1,4 @@
-project_name: builder
+project_name: rails-translator
 
 release:
   github:
