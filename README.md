@@ -12,12 +12,23 @@ translation process.
 - Supports nested YAML structures.
 - Automatically saves the translated file with the appropriate language code.
 
+## Installation
+
+1. **Download Builder**:
+
+   Using Homebrew:
+   
+   ```bash
+   brew tap jtarchie/translation https://github.com/jtarchie/translation
+   brew install rails-translator
+   ```
+
 ## Usage
 
 1. Translate the example from English to Japanese:
 
    ```bash
-   translation \
+   rails-translator \
     --from-filename examples/en.yml \
     --from-language "British English" \
     --to-filename examples/jp.yml \

@@ -40,12 +40,12 @@ class RailsTranslator < Formula
       sha256 "499bc0a21fc97a831cbb2fcb61bb76ff99ac2931bd77919f2cbdfc5613ac051a"
 
       def install
-        bin.install "translation"
+        bin.install "rails-translator"
       end
     end
   end
 
   test do
-    system "#{bin}/translation --help"
+    system "#{bin}/rails-translator --help"
   end
 end
