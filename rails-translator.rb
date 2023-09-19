@@ -13,7 +13,7 @@ class RailsTranslator < Formula
       sha256 "197035ceb3524fc0772f611fb85aac8383fd0a8a4728b807a62a6f5da96cfa5e"
 
       def install
-        bin.install "translation"
+        bin.install "rails-translator"
       end
     end
     if Hardware::CPU.arm?
@@ -21,7 +21,7 @@ class RailsTranslator < Formula
       sha256 "c43516101370aaba8424b467c20c3781d89018d3f19389e261bc68429e99848e"
 
       def install
-        bin.install "translation"
+        bin.install "rails-translator"
       end
     end
   end
@@ -32,7 +32,7 @@ class RailsTranslator < Formula
       sha256 "563eff801aaee1570cba35b12ab70da2905e578462fb1b24fc9b9d0446e4f1c3"
 
       def install
-        bin.install "translation"
+        bin.install "rails-translator"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
