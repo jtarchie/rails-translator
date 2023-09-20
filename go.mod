@@ -1,4 +1,4 @@
-module github.com/jtarchie/translation
+module github.com/jtarchie/rails-translator
 
 go 1.20
 

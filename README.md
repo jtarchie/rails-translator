@@ -19,7 +19,7 @@ translation process.
    Using Homebrew:
    
    ```bash
-   brew tap jtarchie/translation https://github.com/jtarchie/translation
+   brew tap jtarchie/translation https://github.com/jtarchie/rails-translator
    brew install rails-translator
    ```
 

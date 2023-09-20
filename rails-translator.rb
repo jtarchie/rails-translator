@@ -9,7 +9,7 @@ class RailsTranslator < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jtarchie/translation/releases/download/v0.0.3/rails-translator_darwin_x86_64.tar.gz"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_darwin_x86_64.tar.gz"
       sha256 "197035ceb3524fc0772f611fb85aac8383fd0a8a4728b807a62a6f5da96cfa5e"
 
       def install
@@ -17,7 +17,7 @@ class RailsTranslator < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jtarchie/translation/releases/download/v0.0.3/rails-translator_darwin_arm64.tar.gz"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_darwin_arm64.tar.gz"
       sha256 "c43516101370aaba8424b467c20c3781d89018d3f19389e261bc68429e99848e"
 
       def install
@@ -28,7 +28,7 @@ class RailsTranslator < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jtarchie/translation/releases/download/v0.0.3/rails-translator_linux_x86_64.tar.gz"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_linux_x86_64.tar.gz"
       sha256 "563eff801aaee1570cba35b12ab70da2905e578462fb1b24fc9b9d0446e4f1c3"
 
       def install
@@ -36,7 +36,7 @@ class RailsTranslator < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jtarchie/translation/releases/download/v0.0.3/rails-translator_linux_arm64.tar.gz"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_linux_arm64.tar.gz"
       sha256 "35a60df905418f4fc7f4817c8c414fb3a78cd3380875ed239d87555e47305d96"
 
       def install
