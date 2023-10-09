@@ -4,7 +4,7 @@ go 1.20
 
 require (
 	github.com/alecthomas/kong v0.8.0
-	github.com/onsi/ginkgo/v2 v2.12.1
+	github.com/onsi/ginkgo/v2 v2.13.0
 	github.com/onsi/gomega v1.28.0
 	github.com/sashabaranov/go-openai v1.15.4
 	gopkg.in/yaml.v3 v3.0.1
