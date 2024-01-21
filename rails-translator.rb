@@ -5,47 +5,47 @@
 class RailsTranslator < Formula
   desc ""
   homepage ""
-  version "0.0.3"
+  version "0.0.4"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_darwin_x86_64.tar.gz"
-      sha256 "197035ceb3524fc0772f611fb85aac8383fd0a8a4728b807a62a6f5da96cfa5e"
+    if Hardware::CPU.arm?
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.4/rails-translator_darwin_arm64.tar.gz"
+      sha256 "41b3e8d6036e616bd455936f895422a2229e66a4998f246e0849abe746706714"
 
       def install
-        bin.install "rails-translator"
+        bin.install "translation"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_darwin_arm64.tar.gz"
-      sha256 "c43516101370aaba8424b467c20c3781d89018d3f19389e261bc68429e99848e"
+    if Hardware::CPU.intel?
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.4/rails-translator_darwin_x86_64.tar.gz"
+      sha256 "4ec2f7c4479f6339a14c2377313fd4723fe5ab95515b77a50c97802d56ec5fbf"
 
       def install
-        bin.install "rails-translator"
+        bin.install "translation"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_linux_x86_64.tar.gz"
-      sha256 "563eff801aaee1570cba35b12ab70da2905e578462fb1b24fc9b9d0446e4f1c3"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.4/rails-translator_linux_x86_64.tar.gz"
+      sha256 "93261946a7c02af03ac6986c00245092799d3bd38d529bfed6f862d4217aed41"
 
       def install
-        bin.install "rails-translator"
+        bin.install "translation"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.3/rails-translator_linux_arm64.tar.gz"
-      sha256 "35a60df905418f4fc7f4817c8c414fb3a78cd3380875ed239d87555e47305d96"
+      url "https://github.com/jtarchie/rails-translator/releases/download/v0.0.4/rails-translator_linux_arm64.tar.gz"
+      sha256 "500bb0a8e5dbd0cd050941528f0d60b321fbc925375df7f68cc746e47a5dbb6f"
 
       def install
-        bin.install "rails-translator"
+        bin.install "translation"
       end
     end
   end
 
   test do
-    system "#{bin}/rails-translator --help"
+    system "#{bin}/translation --help"
   end
 end
