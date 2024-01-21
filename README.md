@@ -17,7 +17,7 @@ translation process.
 1. **Download Builder**:
 
    Using Homebrew:
-   
+
    ```bash
    brew tap jtarchie/translation https://github.com/jtarchie/rails-translator
    brew install rails-translator
