@@ -1,0 +1,6 @@
+jp:
+    static_pages:
+        index:
+            services_html: 私たちは<em>良い人々</em>に向けて、いくつかの高級なサービスを提供します。
+            welcome: ようこそ！
+    welcome_html: <b>ようこそ、%{username}さん!</b>

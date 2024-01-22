@@ -17,7 +17,11 @@ tasks:
   translate:
     cmds:
     - task: build
-    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/jp.yaml --to-language "Japanese"
-    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/zh.yaml --to-language "Chinese"
-    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es.yaml --to-language "Spanish"
-    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es-mx.yaml --to-language "Spanish/Mexico"
+    # - ./rails-translator --from-filename examples/en.yaml --to-filename examples/jp.yaml --to-language "Japanese"
+    # - ./rails-translator --from-filename examples/en.yaml --to-filename examples/zh.yaml --to-language "Chinese"
+    # - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es.yaml --to-language "Spanish"
+    # - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es-mx.yaml --to-language "Spanish/Mexico"
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/jp.gpt4.yaml --to-language "Japanese" --model gpt-4
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/zh.gpt4.yaml --to-language "Chinese" --model gpt-4
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es.gpt4.yaml --to-language "Spanish" --model gpt-4
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es-mx.gpt4.yaml --to-language "Spanish/Mexico" --model gpt-4

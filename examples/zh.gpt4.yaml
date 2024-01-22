@@ -1,0 +1,6 @@
+zh:
+    static_pages:
+        index:
+            services_html: 我们为<em>好人</em>提供一些高级服务。
+            welcome: 欢迎！
+    welcome_html: <b>欢迎 %{username}!</b>
