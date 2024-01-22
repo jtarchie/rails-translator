@@ -30,5 +30,5 @@ Brewfile.lock.json
 dist/
 .DS_Store
 .env*
-examples/jp.yaml
+rails-translator
 translation

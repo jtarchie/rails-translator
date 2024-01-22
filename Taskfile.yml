@@ -14,3 +14,10 @@ tasks:
     - task: lint
     - task: build
     - go run github.com/onsi/ginkgo/v2/ginkgo -r -p --race --cover --tags test
+  translate:
+    cmds:
+    - task: build
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/jp.yaml --to-language "Japanese"
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/zh.yaml --to-language "Chinese"
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es.yaml --to-language "Spanish"
+    - ./rails-translator --from-filename examples/en.yaml --to-filename examples/es-mx.yaml --to-language "Spanish/Mexico"

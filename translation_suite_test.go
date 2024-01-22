@@ -63,7 +63,7 @@ var _ = Describe("Translations", func() {
 					FromFilename:      fromFile,
 					FromLanguage:      "en",
 					OpenAIAccessToken: "YOUR_TEST_TOKEN",
-					ToFilename:        "jp",
+					ToFilename:        tempDir + "/jp.yaml",
 					ToLanguage:        "Japanese",
 				}
 
@@ -72,7 +72,8 @@ var _ = Describe("Translations", func() {
 
 				// Read the translated file and check its contents
 				contents, _ := os.ReadFile(tempDir + "/jp.yaml")
-				Expect(string(contents)).To(ContainSubstring("こんにちは！"))
+				Expect(string(contents)).To(ContainSubstring("jp:\n"))
+				Expect(string(contents)).To(ContainSubstring("こんにちは"))
 			})
 		})
 	})

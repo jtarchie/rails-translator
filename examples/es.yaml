@@ -1,0 +1,6 @@
+es:
+    static_pages:
+        index:
+            services_html: Ofrecemos servicios de lujo a <em>personas buenas</em>.
+            welcome: ¡Bienvenido!
+    welcome_html: <b>¡Bienvenido %{username}!</b>

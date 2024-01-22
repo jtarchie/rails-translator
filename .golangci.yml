@@ -1,41 +1,24 @@
 run:
   skip-files: []
-linters-settings:
-  err-check:
-    check-type-assertions: true
-    check-blank: true
-  grouper:
-    import-require-single-import: true
-    import-require-grouping: true
-  unparam:
-    check-exported: true
 linters:
-  disable-all: true
-  enable:
-  - errcheck
-  - errorlint
-  - exhaustive
-  - exportloopref
-  - goconst
-  - gci
-  - gocritic
-  - gocyclo
-  - gofmt
-  # - gosec
-  - gosimple
-  - govet
-  - grouper
-  - ineffassign
-  - megacheck
-  - misspell
-  - nakedret
-  - nlreturn
-  - prealloc
-  - staticcheck
-  - stylecheck
-  - typecheck
-  - unconvert
-  - unparam
-  - unused
-  - wsl
-  # - wrapcheck
+  enable-all: true
+  disable:
+  - depguard
+  - exhaustruct
+  - paralleltest
+  - gomoddirectives
+  - lll
+  - revive
+  - goerr113
+
+  # linters deprecated
+  - deadcode
+  - exhaustivestruct
+  - golint
+  - ifshort
+  - interfacer
+  - nosnakecase
+  - maligned
+  - scopelint
+  - structcheck
+  - varcheck
