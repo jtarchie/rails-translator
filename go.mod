@@ -3,7 +3,7 @@ module github.com/jtarchie/rails-translator
 go 1.20
 
 require (
-	github.com/alecthomas/kong v0.8.1
+	github.com/alecthomas/kong v0.9.0
 	github.com/onsi/ginkgo/v2 v2.15.0
 	github.com/onsi/gomega v1.31.1
 	github.com/sashabaranov/go-openai v1.20.1
