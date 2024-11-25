@@ -8,7 +8,7 @@ require (
 	github.com/alecthomas/kong v1.4.0
 	github.com/onsi/ginkgo/v2 v2.21.0
 	github.com/onsi/gomega v1.35.1
-	github.com/sashabaranov/go-openai v1.35.6
+	github.com/sashabaranov/go-openai v1.35.7
 	gopkg.in/yaml.v3 v3.0.1
 )
 
